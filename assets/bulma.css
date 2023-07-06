@@ -74,6 +74,28 @@ fieldset[disabled] .pagination-ellipsis {
   user-select: none;
 }
 
+.container {
+  background-color: #ABABAB;
+  height: 10rem;
+  width: 100vw;
+  display: flex;
+}
+
+.table-container {
+  flex: 1;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  padding: 10px;
+}
+
+
+
 .select:not(.is-multiple):not(.is-loading)::after, .navbar-link:not(.is-arrowless)::after {
   border: 3px solid transparent;
   border-radius: 2px;

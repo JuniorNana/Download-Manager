@@ -1,19 +1,177 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <link href="../assets/bulma.css" rel="stylesheet">
-    <title>PA-Download</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <link href="../assets/bulma.css" rel="stylesheet">
+  <title>PA-Download</title>
+</head>
+
+<body>
+  <div class="is-size-1-desktop is-fullwidth is-medium">
+    <form>
+      <table border="1">
+        <tr>
+          <th>Proxy-Usage</th>
+          <th>Proxy-Settings</th>
+          <th>PA-Systemtechnology-Distribution Logon</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="foobar">
+                Use default
+              </label><br>
+              <label class="radio">
+                <input type="radio" name="foobar">
+                No proxy
+              </label><br>
+              <label class="radio">
+                <input type="radio" name="foobar">
+                Specific proxy
+              </label>
+            </div>
+          </td>
+          <td>
+            Proxy servers: <input  class="ml-3" style="width: 21.5rem;" type="text"><br>
+            Authentication:
+           
+              <select class="select ml-1">
+                <option>Basic</option>
+                <option>No Authentication</option>
+              </select>
+              <button class="button ml-4">Add Proxy Credentials</button>
+          </td>
+          <td>
+      <div class="field">
+          <input class="input" type="text" placeholder="Username">
+      </div>
+      <div class="field">
+          <input class="input" type="password" placeholder="Password">
+      </div>
+      <label class="checkbox">
+        <input type="checkbox">
+       No unpacking
+      </label>
+      
+          </td>
+        </tr>
+      </table>
+    <fieldset>
+     <legend style="display: inline-block;"> Basics </legend>
+     <table border="1">
+      <tr>
+        <td>
+      <div class="file">
+        Download Root: <input  class="mr-3" type="text">
+        <label class="file-label  mr-3">
+          <input class="file-input  mr-3" type="file" name="resume">
+          <span class="file-cta">
+            <span class="file-label">
+              Choose a file…
+            </span>
+            </span>
+        </label>
+        proALPHA-Version: 
+        <div class="select">
+          <select>
+            <option>9.3</option>
+            <option>9.2.1</option>
+            <option>9.2.0</option>
+            <option>9.0.2</option>
+            <option>9.0.1</option>
+            <option>9.0.0</option>
+            <option>8-Build2201</option>
+            <option>8-Build2111</option>
+            <option>72d00-Build2203</option>
+            <option>72d00-Build2109</option>
+            <option>72d00-Build2107</option>
+            <option>72d00-Build2105</option>
+            <option>72d00-Build2103</option>
+            <option>72d00</option>
+            <option>71e00</option>
+            <option>71e07</option>
+            <option>61g00</option>
+            <option>61f00</option>
+            <option>61f00pw84</option>
+            <option>62d00</option>
+            <option>62e00</option>
+            <option>62e00pl</option>
+            <option>62e00us</option>
+            <option>62e00hu</option>
+            <option>71d00sp1</option>
+            <option>71d01</option>
+            <option>61e00</option>
+          </select>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div style="display: flex; align-items: center;">
+        <button class="is-medium" style="margin-right: 10px;"><img src="../assets/refresh.ico" alt=""></button>
+        <div style="display: flex; flex-direction: column;">
+          <button class="button">create folders only</button>
+          <button class="button">Start download</button>
+        </div>
+      </div>
+    </td>    
+    </tr>
+     </table>
+    </fieldset>
+
+    <div class="container" style="margin: 8px;">
+      <div class="table-container">
+        <table border="1" style="background-color: white;">
+          <tr>
+         
+            <td>chk</td>
+            <td>name</td>
+            <td>filename</td>
+            <td>destination</td>
+            <td>status</td>
+          
+          </tr>
+          <tr>
+           
+            <td><input type="checkbox" style="text-align: center;"></td>
+            <td>chrome</td>
+            <td>googlechromestandaloneenterprise64.msi</td>
+            <td>thirdparty</td>
+            <td></td>
+          </tr>
+          <tr>
+          
+            <td><input type="checkbox"style="text-align: center;"></td>
+            <td>notepadplusplus</td>
+            <td>npp.*.installer.x64.exe</td>
+            <td>thirdparty</td>
+            <td></td>
+          </tr>
+          <tr>
+      
+            <td><input type="checkbox" style="text-align: center;"></td>
+            <td>7zip</td>
+            <td>7z*-x64.exe</td>
+            <td>thirdparty</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  
+
+
+    </form>
+    <footer class="card-footer is-justify-content-flex-end">
+      App v1.1.4.7 <div class="ml-2">config v1.1.4.7</div>
+    </footer>
+  </div>
+
+  <!-- You can also require other files to run in this process -->
+  <script src="./renderer.js"></script>
+</body>
+
 </html>
