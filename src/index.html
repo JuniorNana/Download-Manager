@@ -4,13 +4,14 @@
 <head>
   <meta charset="UTF-8">
   <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
   <link href="../assets/bulma.css" rel="stylesheet">
   <title>PA-Download</title>
 </head>
 
-<body style="background-color: #F0F0F0;">
-  <div style="margin: 8px;" class="is-size-1-desktop is-fullwidth is-medium">
+<body style="background-color: #F0F0F0; font-size: smaller;">
+  <div style="margin: 8px;" class="is-size-1-desktop is-fullwidth is-small">
     <form>
       <table border="1" style="width: 96.5vw">
         <tr>
@@ -36,134 +37,104 @@
             </div>
           </td>
           <td>
-            Proxy servers: <input  class="ml-3" style="width: 21.5rem;" type="text"><br>
+            Proxy servers: <input class="ml-3" style="width: 21.5rem;" type="text"><br>
             Authentication:
-           
-              <select class="select ml-1">
-                <option>Basic</option>
-                <option>No Authentication</option>
-              </select>
-              <button class="button ml-4">Add Proxy Credentials</button>
+            <select class="select ml-1">
+              <option>Basic</option>
+              <option>No Authentication</option>
+            </select>
+            <button class="button ml-4">Add Proxy Credentials</button>
           </td>
           <td>
-      <div class="field">
-          <input class="input" type="text" placeholder="Username">
-      </div>
-      <div class="field">
-          <input class="input" type="password" placeholder="Password">
-      </div>
-      <label class="checkbox">
-        <input type="checkbox">
-       No unpacking
-      </label>
-      
+            <div class="field">
+              <input class="input" type="text" placeholder="Username">
+            </div>
+            <div class="field">
+              <input class="input" type="password" placeholder="Password">
+            </div>
+            <label class="checkbox">
+              <input type="checkbox">
+              No unpacking
+            </label>
           </td>
         </tr>
       </table>
-    <fieldset>
-     <legend style="display: inline-block;"> Basics </legend>
-     <table border="1">
-      <tr>
-        <td>
-      <div class="file">
-        Download Root: <input  class="mr-3" type="text">
-        <label class="file-label  mr-3">
-          <input class="file-input  mr-3" type="file" name="resume">
-          <span class="file-cta">
-            <span class="file-label">
-              Choose a file…
-            </span>
-            </span>
-        </label>
-        proALPHA-Version: 
-        <div class="select">
-          <select>
-            <option>9.3</option>
-            <option>9.2.1</option>
-            <option>9.2.0</option>
-            <option>9.0.2</option>
-            <option>9.0.1</option>
-            <option>9.0.0</option>
-            <option>8-Build2201</option>
-            <option>8-Build2111</option>
-            <option>72d00-Build2203</option>
-            <option>72d00-Build2109</option>
-            <option>72d00-Build2107</option>
-            <option>72d00-Build2105</option>
-            <option>72d00-Build2103</option>
-            <option>72d00</option>
-            <option>71e00</option>
-            <option>71e07</option>
-            <option>61g00</option>
-            <option>61f00</option>
-            <option>61f00pw84</option>
-            <option>62d00</option>
-            <option>62e00</option>
-            <option>62e00pl</option>
-            <option>62e00us</option>
-            <option>62e00hu</option>
-            <option>71d00sp1</option>
-            <option>71d01</option>
-            <option>61e00</option>
-          </select>
-        </div>
-      </div>
-    </td>
-    <td>
-      <div style="display: flex; align-items: center;">
-        <button class="is-medium" style="margin-right: 10px;"><img src="../assets/refresh.ico" alt=""></button>
-        <div style="display: flex; flex-direction: column;">
-          <button class="button">create folders only</button>
-          <button class="button">Start download</button>
-        </div>
-      </div>
-    </td>    
-    </tr>
-     </table>
-    </fieldset>
-
-    <div class="container">
-      <div class="table-container">
-        <table border="1" style="background-color: white;">
+      <fieldset>
+        <legend style="display: inline-block;"> Basics </legend>
+        <table border="1">
           <tr>
-         
-            <td>chk</td>
-            <td>name</td>
-            <td>filename</td>
-            <td>destination</td>
-            <td>status</td>
-          
-          </tr>
-          <tr>
-           
-            <td><input type="checkbox" style="text-align: center;"></td>
-            <td>chrome</td>
-            <td>googlechromestandaloneenterprise64.msi</td>
-            <td>thirdparty</td>
-            <td></td>
-          </tr>
-          <tr>
-          
-            <td><input type="checkbox"style="text-align: center;"></td>
-            <td>notepadplusplus</td>
-            <td>npp.*.installer.x64.exe</td>
-            <td>thirdparty</td>
-            <td></td>
-          </tr>
-          <tr>
-      
-            <td><input type="checkbox" style="text-align: center;"></td>
-            <td>7zip</td>
-            <td>7z*-x64.exe</td>
-            <td>thirdparty</td>
-            <td></td>
+            <td>
+              <div class="file">
+                Download Root: <input class="mr-3" type="text">
+                <label class="file-label mr-3">
+                  <input class="file-input mr-3" type="file" name="resume">
+                  <span class="file-cta">
+                    <span class="file-label">
+                      Choose a file…
+                    </span>
+                  </span>
+                </label>
+                proALPHA-Version:
+                <div class="select">
+                  <select id="version-select">
+                    <option value="">Choose a version</option>
+                    <option value="9.2.1">9.2.1</option>
+                    <option value="9.2.0">9.2.0</option>
+                    <option value="9.0.2">9.0.2</option>
+                    <option value="9.0.1">9.0.1</option>
+                    <option value="9.0.0">9.0.0</option>
+                    <option value="8-Build2201">8-Build2201</option>
+                    <option value="8-Build2111">8-Build2111</option>
+                    <option value="72d00-Build2203">72d00-Build2203</option>
+                    <option value="72d00-Build2109">72d00-Build2109</option>
+                    <option value="72d00-Build2107">72d00-Build2107</option>
+                    <option value="72d00-Build2105">72d00-Build2105</option>
+                    <option value="72d00-Build2103">72d00-Build2103</option>
+                    <option value="72d00">72d00</option>
+                    <option value="71e00">71e00</option>
+                    <option value="71e07">71e07</option>
+                    <option value="61g00">61g00</option>
+                    <option value="61f00">61f00</option>
+                    <option value="61f00pw84">61f00pw84</option>
+                    <option value="62d00">62d00</option>
+                    <option value="62e00">62e00</option>
+                    <option value="62e00pl">62e00pl</option>
+                    <option value="62e00us">62e00us</option>
+                    <option value="62e00hu">62e00hu</option>
+                    <option value="71d00sp1">71d00sp1</option>
+                    <option value="71d01">71d01</option>
+                    <option value="61e00">61e00</option>
+                  </select>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div style="display: flex; align-items: center;">
+                <button class="is-medium" style="margin-right: 10px;"><img src="../assets/refresh.ico" alt=""></button>
+                <div style="display: flex; flex-direction: column;">
+                  <button class="button">create folders only</button>
+                  <button class="button">Start download</button>
+                </div>
+              </div>
+            </td>
           </tr>
         </table>
+      </fieldset>
+
+      <div class="container">
+        <div id="table-container" class="table-container">
+          <table border="1" style="background-color: white;">
+            <tr>
+              <td>chk</td>
+              <td>name</td>
+              <td>filename</td>
+              <td>destination</td>
+              <td>status</td>
+            </tr>
+            <!-- Existing rows removed -->
+          </table>
+        </div>
       </div>
-    </div>
-  
-
-
     </form>
     <footer class="card-footer is-justify-content-flex-end">
       App v1.1.4.7 <div class="ml-2">config v1.1.4.7</div>
@@ -171,7 +142,7 @@
   </div>
 
   <!-- You can also require other files to run in this process -->
-  <script src="./renderer.js"></script>
+  <script src="../renderer.js"></script>
 </body>
 
 </html>

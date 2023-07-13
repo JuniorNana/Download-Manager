@@ -1,0 +1,3983 @@
+{
+	"prepare": {
+		"globalSettings": {
+			"_unpack": "true"
+		},
+		"folderCreation": {
+			"folder": [
+				{
+					"_id": "1",
+					"_name": "pA-install",
+					"_root": "@root@"
+				},
+				{
+					"_id": "2",
+					"_name": "@version@",
+					"_root": "1"
+				},
+				{
+					"_id": "3",
+					"_name": "repository",
+					"_root": "2"
+				},
+				{
+					"_id": "4",
+					"_name": "licenses",
+					"_root": "2"
+				},
+				{
+					"_id": "5",
+					"_name": "tools",
+					"_root": "2"
+				},
+				{
+					"_id": "6",
+					"_name": "sitebuilder",
+					"_root": "2"
+				},
+				{
+					"_id": "7",
+					"_name": "customerfiles",
+					"_root": "2"
+				},
+				{
+					"_id": "8",
+					"_name": "sourcecode",
+					"_root": "2"
+				},
+				{
+					"_id": "9",
+					"_name": "openedge",
+					"_root": "1"
+				},
+				{
+					"_id": "10",
+					"_name": "customer",
+					"_root": "4"
+				},
+				{
+					"_id": "11",
+					"_name": "demo",
+					"_root": "4"
+				},
+				{
+					"_id": "12",
+					"_name": "servicepacks",
+					"_root": "9"
+				},
+				{
+					"_id": "13",
+					"_name": "hotfixes",
+					"_root": "9"
+				},
+				{
+					"_id": "14",
+					"_name": "thirdparty",
+					"_root": "1"
+				}
+			]
+		},
+		"downloads": {
+			"tpdownloads": {
+				"download": [
+					{
+						"link": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi",
+						"filename": "googlechromestandaloneenterprise64.msi",
+						"destination": "thirdparty",
+						"_name": "chrome",
+						"_type": "direct",
+						"_auth": "false",
+						"_index": "0"
+					},
+					{
+						"link": "https://api.github.com/repos/notepad-plus-plus/notepad-plus-plus/releases/latest",
+						"filename": "npp.*.installer.x64.exe",
+						"destination": "thirdparty",
+						"_name": "notepadplusplus",
+						"_type": "special",
+						"_auth": "false",
+						"_index": "-17"
+					},
+					{
+						"link": "https://www.7-zip.de",
+						"filename": "7z*-x64.exe",
+						"destination": "thirdparty",
+						"_name": "7zip",
+						"_type": "special",
+						"_auth": "false",
+						"_index": "-8"
+					}
+				],
+				"_object": "1"
+			},
+			"padist": {
+				"baseurl": "https://sysportal.proalpha.com/files/",
+				"loginurl": "process.php?do=login",
+				"downurl": "process.php?do=download&id=",
+				"useragent": "[Microsoft.PowerShell.Commands.PSUserAgent]::Chrome",
+				"contenttype": "application/x-www-form-urlencoded; charset=UTF-8",
+				"method": "Post",
+				"_object": "1"
+			},
+			"padownloads": [
+				{
+					"download": [
+						{
+							"filename": "proALPHA-9.2.1-sb-grnd-inst.zip",
+							"id": "620",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-9.2.1-de-src.zip",
+							"id": "619",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "56d79959e446780781c062d4eaa68131"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-9.2.1-de-repository.zip",
+							"id": "618",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "00c7f2b5afa251b7bb20e2563b3a452b"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk8u312-b07-x64.zip",
+							"id": "501",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "ba6b03ab6a6ee086271647a768e84757"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x32.zip",
+							"id": "500",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "501460c56ceb549f4ac9496b833bdb93"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x64.zip",
+							"id": "499",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "240cb0df7c805251be52efe9bdd3c6c2"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.2.1-v2-demasTemplates.zip",
+							"id": "641",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "e9b649868a1f3c53229015306a64df61"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.2.1-v2-pAST.zip",
+							"id": "640",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2c30d70f3ca15d45d2c898b97fc87782"
+							},
+							"_name": "past_scripts",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_32.zip",
+							"id": "646",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "900b077d49dbb4b826f3607c0c97d453"
+							},
+							"_name": "oe12211wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_64.zip",
+							"id": "647",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f0f8abbe103e49e0d8413b6b98df851c"
+							},
+							"_name": "oe12211wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "9.2.1",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-9.2.0-sb-grnd-inst.zip",
+							"id": "594",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-9.2.0-de-src.zip",
+							"id": "593",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "b81e77d25d74988fcf1756f529cf16fa"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-9.2.0-de-repository.zip",
+							"id": "592",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "634bf2d4caa892bda9a3110655895680"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk8u312-b07-x64.zip",
+							"id": "501",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "ba6b03ab6a6ee086271647a768e84757"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x32.zip",
+							"id": "500",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "501460c56ceb549f4ac9496b833bdb93"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x64.zip",
+							"id": "499",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "240cb0df7c805251be52efe9bdd3c6c2"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.2.0-v2-demasTemplates.zip",
+							"id": "602",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "513be0dfc961269134f0e4105bc7da71"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.2.0-v2-pAST.zip",
+							"id": "604",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "60980c0cc625d716b0c3da947971cdac"
+							},
+							"_name": "past_scripts",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_32.zip",
+							"id": "646",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "900b077d49dbb4b826f3607c0c97d453"
+							},
+							"_name": "oe12211wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_64.zip",
+							"id": "647",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f0f8abbe103e49e0d8413b6b98df851c"
+							},
+							"_name": "oe12211wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "9.2.0",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-9.1.0-sb-grnd-inst.zip",
+							"id": "570",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-9.1.0-de-src.zip",
+							"id": "572",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "cfe3ae48e5d8fd22a08197be9d230ac9"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-9.1.0-de-repository.zip",
+							"id": "571",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a2a9c09ff8ebb0871ee30ba3e3bfd261"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk8u312-b07-x64.zip",
+							"id": "501",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "ba6b03ab6a6ee086271647a768e84757"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x32.zip",
+							"id": "500",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "501460c56ceb549f4ac9496b833bdb93"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x64.zip",
+							"id": "499",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "240cb0df7c805251be52efe9bdd3c6c2"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.1.0-v1-demasTemplates.zip",
+							"id": "576",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "14688d9743adb9ae5fc444f828ad0d4f"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.1.0-v2-pAST.zip",
+							"id": "590",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "234a084a939e2300ed4b3c7884c2306e"
+							},
+							"_name": "past_scripts",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_32.zip",
+							"id": "646",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "900b077d49dbb4b826f3607c0c97d453"
+							},
+							"_name": "oe12211wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_64.zip",
+							"id": "647",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f0f8abbe103e49e0d8413b6b98df851c"
+							},
+							"_name": "oe12211wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "9.1.0",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-9.0.2-sb-grnd-inst.zip",
+							"id": "555",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-9.0.2-de-src.zip",
+							"id": "554",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "66aa1aad6ce7cfd1f56526aded467900"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-9.0.2-de-repository.zip",
+							"id": "553",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "82d9f819bb2648c7587051360cceeb7b"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk8u312-b07-x64.zip",
+							"id": "501",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "ba6b03ab6a6ee086271647a768e84757"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x32.zip",
+							"id": "500",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "501460c56ceb549f4ac9496b833bdb93"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x64.zip",
+							"id": "499",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "240cb0df7c805251be52efe9bdd3c6c2"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.0.2-v2-demasTemplates.zip",
+							"id": "564",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "35c39162b5735823dc4184739de5b60e"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.0.2-v3-pAST.zip",
+							"id": "569",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "e6ecafec7cd87cee1f961ff19c2d59c5"
+							},
+							"_name": "past_scripts",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_32.zip",
+							"id": "646",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "900b077d49dbb4b826f3607c0c97d453"
+							},
+							"_name": "oe12211wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_64.zip",
+							"id": "647",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f0f8abbe103e49e0d8413b6b98df851c"
+							},
+							"_name": "oe12211wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "9.0.2",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-9.0.1-sb-grnd-inst.zip",
+							"id": "520",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-9.0.1-de-src.zip",
+							"id": "523",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "11e2c85c3f4cc59390fea3f541fdb94d"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-9.0.1-de-repository.zip",
+							"id": "522",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "55a0d001d27a77827aa5438d3ea6dc5e"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk8u312-b07-x64.zip",
+							"id": "501",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "ba6b03ab6a6ee086271647a768e84757"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x32.zip",
+							"id": "500",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "501460c56ceb549f4ac9496b833bdb93"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x64.zip",
+							"id": "499",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "240cb0df7c805251be52efe9bdd3c6c2"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.0.1-v1-demasTemplates.zip",
+							"id": "535",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "09a58410e061a25d727deb1f1fc6f726"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.0.1-v1-pAST.zip",
+							"id": "536",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c7093cb87c421ea92e19bcf49047a51a"
+							},
+							"_name": "past_scripts",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_32.zip",
+							"id": "646",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "900b077d49dbb4b826f3607c0c97d453"
+							},
+							"_name": "oe12211wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_64.zip",
+							"id": "647",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f0f8abbe103e49e0d8413b6b98df851c"
+							},
+							"_name": "oe12211wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "9.0.1",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-9.0.0-sb-grnd-inst.zip",
+							"id": "498",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-9.0.0-de-src.zip",
+							"id": "497",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "70d6535d1f45536a044cebf2e31c6cfb"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-9.0.0-de-repository.zip",
+							"id": "496",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f1bf82f2f63687f5c1e0ab17df280a1e"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk8u312-b07-x64.zip",
+							"id": "501",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "ba6b03ab6a6ee086271647a768e84757"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x32.zip",
+							"id": "500",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "501460c56ceb549f4ac9496b833bdb93"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jdk11.0.13-8-x64.zip",
+							"id": "499",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "240cb0df7c805251be52efe9bdd3c6c2"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.0.0-v1-demasTemplates.zip",
+							"id": "503",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "b482574988201c9fa2a94f95acd3f4eb"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-9.0.0-v5-pAST.zip",
+							"id": "519",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "dacafcff72f7734d30be0c49a9e5e854"
+							},
+							"_name": "past_scripts",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_32.zip",
+							"id": "646",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "900b077d49dbb4b826f3607c0c97d453"
+							},
+							"_name": "oe12211wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_12.2.11_WIN_64.zip",
+							"id": "647",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f0f8abbe103e49e0d8413b6b98df851c"
+							},
+							"_name": "oe12211wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "9.0.0",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-8.2201-sb-grnd-inst.zip",
+							"id": "483",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-8.2201-de-src.zip",
+							"id": "486",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "5a45b0658e732ec210a16d7f1e579e8f"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-8.2201-de-repository.zip",
+							"id": "485",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a17f7bf92d6837b83a0e795a5aa65835"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-8.Build2111-demasTemplates.zip",
+							"id": "474",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2afe349d220b4ddea14a3384c6ff50f0"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "8-Build2201",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-8.2111-sb-grnd-inst.zip",
+							"id": "460",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-8.2111-de-src.zip",
+							"id": "456",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2a65eb64984d3db89d70f227d7ed80e4"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-8.2111-de-repository.zip",
+							"id": "459",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8af410bedf24c8779684023c6bb31c26"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-8.Build2111-demasTemplates.zip",
+							"id": "474",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2afe349d220b4ddea14a3384c6ff50f0"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "8-Build2111",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-72d00.2203-sb-grnd-inst.zip",
+							"id": "509",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-72d00.2203-de-src.zip",
+							"id": "508",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "7a3e20f73a7c6484aa27b0ee564ef1ad"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-72d00.2203-de-repositor.zip",
+							"id": "511",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "79f6a3260b8546e5be80f882e77ce6a7"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-72d00.Build2109-demasTemplates.zip",
+							"id": "473",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8b91fb161695e7163a8113c74d317d58"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "72d00-Build2203",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-72d00.2109-sb-grnd-inst.zip",
+							"id": "431",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-72d00.2109-de-src.zip",
+							"id": "430",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "5e21dd16ade0dfd90e03ebe37a3f3952"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-72d00.2109-de-repository.zip",
+							"id": "429",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "4b31f5b502115b00f00c2e281c3ce5f0"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-72d00.Build2109-demasTemplates.zip",
+							"id": "473",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8b91fb161695e7163a8113c74d317d58"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "72d00-Build2109",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-72d00.2107-sb-grnd-inst.zip",
+							"id": "391",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-72d00.2107-de-src.zip",
+							"id": "392",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "af1239a7fa833fe9c3b5eb4296dd4ff5"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-72d00.2107-de-repository.zip",
+							"id": "394",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "badbba838d0546de6f6552aa8d3299cb"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-72d00.Build2109-demasTemplates.zip",
+							"id": "473",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8b91fb161695e7163a8113c74d317d58"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "72d00-Build2107",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-72d00.2105-sb-grnd-inst.zip",
+							"id": "376",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "a3b085d998f9b65f75454e3811534426"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-72d00.2105-de-src.zip",
+							"id": "378",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f55938b2b42b8ee02769211abb939ffa"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-72d00.2105-de-repository.zip",
+							"id": "377",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "0631e2ee778885caa90f7d5fe36922fd"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-72d00.Build2109-demasTemplates.zip",
+							"id": "473",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8b91fb161695e7163a8113c74d317d58"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "72d00-Build2105",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-72d00-sb-grnd-inst.zip",
+							"id": "162",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "108b5c4547d28536675993df18038737"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-72d00.Build2103-de-src.zip",
+							"id": "344",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "de84766c314f985acbd16e61420ae8f3"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-72d00.Build2103-SP1-de-repository.zip",
+							"id": "356",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2049ab139d940ab50d2b68195c26e978"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-72d00.Build2103-de-repository.zip",
+							"id": "347",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "e5ee5e7428dea7cf92df09878fec5a76"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-v72d00-de-DemoDB-LNX.zip",
+							"id": "338",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "596b437aed19e03da1b4adef376344ef"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-v72d00-de-MasterDB-LNX.zip",
+							"id": "339",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "99c775b741cd0649d2dfc89720400bd7"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-72d00.Build2109-demasTemplates.zip",
+							"id": "473",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8b91fb161695e7163a8113c74d317d58"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "glogg-latest-x86_64-setup.zip",
+							"id": "421",
+							"destination": "thirdparty",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "c3db82e13c6bd979cb39865946dbe321"
+							},
+							"_name": "glogg",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "72d00-Build2103",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-72d00-sb-grnd-inst.zip",
+							"id": "162",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "108b5c4547d28536675993df18038737"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-72d00-de-src.zip",
+							"id": "160",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "b2b50d658f07075853fb855a4b16fbb4"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-72d00-de-repository.zip",
+							"id": "340",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "31a52f3d5f07692c71ab76ef98b1745d"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v72d00-de-DemoDB-LNX.zip",
+							"id": "338",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "596b437aed19e03da1b4adef376344ef"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-v72d00-de-MasterDB-LNX.zip",
+							"id": "339",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "99c775b741cd0649d2dfc89720400bd7"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-72d00.Build2109-demasTemplates.zip",
+							"id": "473",
+							"destination": "tools",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8b91fb161695e7163a8113c74d317d58"
+							},
+							"_name": "demas_templates",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.15_WIN_32.zip",
+							"id": "545",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "9479916c3e6c906d4deee845ec0f5ffc"
+							},
+							"_name": "oe11715wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "72d00",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-71e00-sb-grnd-inst.zip",
+							"id": "129",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6032f8731ff1d4e64e886a767a417adf"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-71e00-de-src.zip",
+							"id": "124",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "474c13ecd2fff27524db23931be33435"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-71e00-de-SP1-repository.zip",
+							"id": "133",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "e400507b63ae81074c9f7e4d5ce1806e"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-71e00-de-SP1-repository-fix.zip",
+							"id": "12",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "bc984401a329ef4a66177cc4bef08013"
+							},
+							"_name": "repository-fix-oe1178",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.11_WIN_32.zip",
+							"id": "445",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "5bacb6a37f6ff927ba13245ce264e341"
+							},
+							"_name": "oe11710wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.11_WIN_64.zip",
+							"id": "446",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "829796f333bc7826f1a970cd3128699f"
+							},
+							"_name": "oe11710wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "71e00",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-71e00-sb-grnd-inst.zip",
+							"id": "129",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6032f8731ff1d4e64e886a767a417adf"
+							},
+							"_name": "sitebuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-71e00.Build2006-de-src.zip",
+							"id": "126",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "34bf78f7b2eb4a650f93d8045078a64a"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-71e00.Build2006-de-repository.zip",
+							"id": "125",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "729b1271ee720ef5175b464e55d45929"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-71e00.Build2006-de-repository-fix.zip",
+							"id": "3",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6E3178E897094C662DF00639652EBFB8"
+							},
+							"_name": "repository-fix-oe1178",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "71e07",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-v62e00-SP2-sb-grnd-inst.zip",
+							"id": "40",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "765c0ffc6ab2cde330ab2721cf36654a"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61g00-sb-grnd-inst.zip",
+							"id": "87",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "9C135AF2D95A01B47B23053485EC4115"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61g00-mvn.zip",
+							"id": "88",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "AB840E3DE2795A771B2C7742F9C94D48"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "repository-fixing-archetype-generate.zip",
+							"id": "79",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "0BDAE762B6D7580825FF4B19C628980D"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61g00-src.zip",
+							"id": "91",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "18B7B79AA2693AE734E232AE1426CC61"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA_v61g00-addons.zip",
+							"id": "90",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "79082482CDF7E3290FC82FB4F90208C2"
+							},
+							"_name": "addons",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v61g00-reportlayouts.zip",
+							"id": "86",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "7FEBDFBD7C4B25B4DAA5EE33E37FF13A"
+							},
+							"_name": "addons",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61g00-MasterDB.zip",
+							"id": "85",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "A8AC97305BE3DF79FF76E7DCB53EE6FD"
+							},
+							"_name": "MasterDB",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.15_WIN_32.zip",
+							"id": "545",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "9479916c3e6c906d4deee845ec0f5ffc"
+							},
+							"_name": "oe11715wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.15_WIN_64.zip",
+							"id": "543",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2f38d313b24f3f0d0aa1d1f0d83ec6e8"
+							},
+							"_name": "oe11715wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "61g00",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-v62e00-SP2-sb-grnd-inst.zip",
+							"id": "40",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "765c0ffc6ab2cde330ab2721cf36654a"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61f00-sb-grnd-inst.zip",
+							"id": "112",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "9C135AF2D95A01B47B23053485EC4115"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61f00-mvn.zip",
+							"id": "114",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8226095A115ED58DCE72CA2A553DA798"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "repository-fixing-archetype-generate.zip",
+							"id": "79",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "0BDAE762B6D7580825FF4B19C628980D"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61f00-src.zip",
+							"id": "113",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "A8FCEB00BFD930BBC1095EF9D06B56AF"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA_v61f00-addons.zip",
+							"id": "108",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6511809CE8B392D5F1DAF1A725F58169"
+							},
+							"_name": "addons",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v61f00-reportlayouts.zip",
+							"id": "116",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "16E0D0CA32D50C65B633358AB023EFBA"
+							},
+							"_name": "addons",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61f00-MasterDB.zip",
+							"id": "110",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "098C112968C3BAFBA74DF84457CEDCA9"
+							},
+							"_name": "MasterDB",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.15_WIN_32.zip",
+							"id": "545",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "9479916c3e6c906d4deee845ec0f5ffc"
+							},
+							"_name": "oe11715wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.15_WIN_64.zip",
+							"id": "543",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2f38d313b24f3f0d0aa1d1f0d83ec6e8"
+							},
+							"_name": "oe11715wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "61f00",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-v62e00-SP2-sb-grnd-inst.zip",
+							"id": "40",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "765c0ffc6ab2cde330ab2721cf36654a"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61f00-sb-grnd-inst.zip",
+							"id": "112",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "9C135AF2D95A01B47B23053485EC4115"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-61f00-PW84-mvn.zip",
+							"id": "101",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2B66C86C027003154CC865A02D324579"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "repository-fixing-archetype-generate.zip",
+							"id": "79",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "0BDAE762B6D7580825FF4B19C628980D"
+							},
+							"_name": "repositoryfix",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61f00-src.zip",
+							"id": "113",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "A8FCEB00BFD930BBC1095EF9D06B56AF"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-61f00-PW84-addons.zip",
+							"id": "99",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "C76EED43FD21E3F447D6C88B5EA71AF0"
+							},
+							"_name": "addons",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "Master-DB-pA61f-PW84-UTF8.zip",
+							"id": "92",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "1D99DE9E593AC8D202AB0928FD0DF8EF"
+							},
+							"_name": "MasterDB",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "Master-DB-pA61f-PW84-1252.zip",
+							"id": "94",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "903D2B82AF0E38F6BD203CF2D0F00ACB"
+							},
+							"_name": "MasterDB",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.15_WIN_32.zip",
+							"id": "545",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "9479916c3e6c906d4deee845ec0f5ffc"
+							},
+							"_name": "oe11715wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.15_WIN_64.zip",
+							"id": "543",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2f38d313b24f3f0d0aa1d1f0d83ec6e8"
+							},
+							"_name": "oe11715wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "61f00pw84",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-v62d00-de-MasterDB.zip",
+							"id": "119",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "91370764EAA5D808B9CFDB5F6861F4AC"
+							},
+							"_name": "MasterDB",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-v62d00-de-SP1-repository.zip",
+							"id": "117",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "5E358D2E29F76D61B82D3938F8967D1B"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "repository-fixing-archetype-generate.zip",
+							"id": "79",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "0BDAE762B6D7580825FF4B19C628980D"
+							},
+							"_name": "repositoryfix",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v62e00-SP2-sb-grnd-inst.zip",
+							"id": "40",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "765c0ffc6ab2cde330ab2721cf36654a"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v62d00-sb-grnd-inst.zip",
+							"id": "118",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "9C135AF2D95A01B47B23053485EC4115"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v62d00-de-src.zip",
+							"id": "121",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "C724A7DFF9F52B61C11C08894CE2A705"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "62d00",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-v62e00-de-SP2-repository.zip",
+							"id": "41",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "b982e55c395ad0ff2de53a28cd50ef3f"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v62e00-de-SP2-MasterDB.zip",
+							"id": "38",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "58a74e62efc038c57e46e03397386551"
+							},
+							"_name": "MasterDB",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-v62e00-SP2-sb-grnd-inst.zip",
+							"id": "40",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "765c0ffc6ab2cde330ab2721cf36654a"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v62e00-de-SP2-src.zip",
+							"id": "42",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "e564e9c193da161a19d9ef6b822c042f"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "62e00",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-v62e00-de-SP2-repository.zip",
+							"id": "41",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "b982e55c395ad0ff2de53a28cd50ef3f"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-62e00-P11-SP2-repository-delta.zip",
+							"id": "22",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8a8ef3d10e7279ae96dcd9d88bbaebe8"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-62e00-P11-SP2-MasterDB.zip",
+							"id": "25",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "bbc7a6705c7af7eb9217a43503212e29"
+							},
+							"_name": "MasterDB",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-v62e00-SP2-sb-grnd-inst.zip",
+							"id": "40",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "765c0ffc6ab2cde330ab2721cf36654a"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v62e00-de-SP2-src.zip",
+							"id": "42",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "e564e9c193da161a19d9ef6b822c042f"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-62e00-P11-SP2-src.zip",
+							"id": "18",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f84905e6e722de42c1c451d0434c8a07"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "62e00pl",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-v62e00-de-SP2-repository.zip",
+							"id": "41",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "b982e55c395ad0ff2de53a28cd50ef3f"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-62e00-U15-SP2-repository-delta.zip",
+							"id": "9",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3cce79e460d554d9b26ee97838d11dc7"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-62e00-U15-SP2-MasterDB.zip",
+							"id": "6",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "43a13175455ab252aaa7c544cb1e36f8"
+							},
+							"_name": "MasterDB",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-v62e00-SP2-sb-grnd-inst.zip",
+							"id": "40",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "765c0ffc6ab2cde330ab2721cf36654a"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v62e00-de-SP2-src.zip",
+							"id": "42",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "e564e9c193da161a19d9ef6b822c042f"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-62e00-U15-SP2-src.zip",
+							"id": "11",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "00c834718b1e2e5dd4eefce65cdc6e2c"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "62e00us",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-v62e00-de-SP2-repository.zip",
+							"id": "41",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "b982e55c395ad0ff2de53a28cd50ef3f"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-62e00-H07-SP2-repository-delta.zip",
+							"id": "27",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8a15fbbbdd7facba86ab24de6a87d0bc"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-62e00-H07-SP2-MasterDB.zip",
+							"id": "30",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "badd87a2656de2528a2dad3245b432fb"
+							},
+							"_name": "MasterDB",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA-v62e00-SP2-sb-grnd-inst.zip",
+							"id": "40",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "765c0ffc6ab2cde330ab2721cf36654a"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-v62e00-de-SP2-src.zip",
+							"id": "42",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "e564e9c193da161a19d9ef6b822c042f"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proalpha-62e00-H07-SP2-src.zip",
+							"id": "31",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "feac2e0474f514f08bb2b7b77d885782"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "62e00hu",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proalpha-71d00-de-SP1-repository.zip",
+							"id": "4",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "5083760adfde4d7c06e3b58328df1fd8"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-71d00-de-SP1-goLive-GPD-repository-delta.zip",
+							"id": "2",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2acd24f1530337a88ab81775ac8a56a5"
+							},
+							"_name": "repository-GoLive-GPD-delta",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-71d00-SP1-sb-grnd-inst.zip",
+							"id": "5",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "1c748b9432913cd52e786017affa0a6f"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-71d00-de-src.zip",
+							"id": "1",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "48b87e918b944ea14897fdbd2bf742c6"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "71d00sp1",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proalpha-71d00-de-Build-01-repository.zip",
+							"id": "123",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "140346f17211f8e1ecd8570250757b8f"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-71d00-SP1-sb-grnd-inst.zip",
+							"id": "5",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "1c748b9432913cd52e786017affa0a6f"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA-71d00-de-Build-01-src.zip",
+							"id": "127",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "38ccd83d6d78a88e63c375911c3254df"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_32.zip",
+							"id": "657",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3100d8693ac58f494b17d2d9c3997615"
+							},
+							"_name": "oe11717wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.17_WIN_64.zip",
+							"id": "655",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "f9ba07d23ec323a72eb2a7d58d3e89eb"
+							},
+							"_name": "oe11717wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "71d01",
+					"_object": "1"
+				},
+				{
+					"download": [
+						{
+							"filename": "proALPHA-v62e00-SP2-sb-grnd-inst.zip",
+							"id": "40",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "765c0ffc6ab2cde330ab2721cf36654a"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61e00-sb-grnd-inst.zip",
+							"id": "353",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "10453A18C076CF00F715B1BA4E058E60"
+							},
+							"_name": "siteBuilder",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61e00_mvn_SP1.zip",
+							"id": "349",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "3A8A53341AF3A15C7A9BB2FEA22E5559"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61e00-mvn.zip",
+							"id": "352",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "fb624b4a6a1ee28dfc8cafed6c7304ab"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "repository-fixing-archetype-generate.zip",
+							"id": "79",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "0BDAE762B6D7580825FF4B19C628980D"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proALPHA_v61e00-src.zip",
+							"id": "354",
+							"destination": "sourcecode",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6BB1BAAD5D58181A2972662DC503E977"
+							},
+							"_name": "sourcen",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "1"
+						},
+						{
+							"filename": "proALPHA_v61e00-reportlayouts.zip",
+							"id": "351",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "8CC83CAEA4445676567869329D7B32C2"
+							},
+							"_name": "addons",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "proalpha-61e00.zip",
+							"id": "355",
+							"destination": "repository",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "395741d140f9fc1d9df0d3e9594e5272"
+							},
+							"_name": "repository",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "apache-maven-3.3.9.zip",
+							"id": "141",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "035A49A70DA926B0EBBA9F091D3A7459"
+							},
+							"_name": "maven",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "jre1.8.0_101.zip",
+							"id": "142",
+							"destination": "sitebuilder",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "6D3B397EB1D06333F6CDAEC5CC9CEB15"
+							},
+							"_name": "jre180_101",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.15_WIN_32.zip",
+							"id": "545",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "9479916c3e6c906d4deee845ec0f5ffc"
+							},
+							"_name": "oe11715wx32",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						},
+						{
+							"filename": "PROGRESS_OE_11.7.15_WIN_64.zip",
+							"id": "543",
+							"destination": "servicepacks",
+							"filehash": {
+								"_algorithm": "MD5",
+								"__text": "2f38d313b24f3f0d0aa1d1f0d83ec6e8"
+							},
+							"_name": "oe11715wx64",
+							"_type": "indirect",
+							"_auth": "distribution server",
+							"_optional": "0"
+						}
+					],
+					"_version": "61e00",
+					"_object": "1"
+				}
+			]
+		},
+		"_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+		"_xsi:noNamespaceSchemaLocation": "prepare.xsd",
+		"_version": "1.1.4.7"
+	}
+}
