@@ -76,13 +76,17 @@ fieldset[disabled] .pagination-ellipsis {
 
 .container {
   background-color: #ABABAB;
-  height: 10rem;
   width: 100vw;
   display: flex;
 }
 
 .table-container {
   flex: 1;
+}
+
+.error {
+  color: red;
+  font-size: smaller;
 }
 
 table {

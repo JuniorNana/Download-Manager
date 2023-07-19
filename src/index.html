@@ -10,14 +10,14 @@
   <title>PA-Download</title>
 </head>
 
-<body style="background-color: #F0F0F0; font-size: smaller;">
+<body style="background-color: #626a6e; font-size: smaller; color: black;">
   <div style="margin: 8px;" class="is-size-1-desktop is-fullwidth is-small">
     <form>
       <table border="1" style="width: 96.5vw">
         <tr>
-          <th>Proxy-Usage</th>
-          <th>Proxy-Settings</th>
-          <th>PA-Systemtechnology-Distribution Logon</th>
+          <th style="color: #003254;">Proxy-Usage</th>
+          <th style="color: #003254;">Proxy-Settings</th>
+          <th style="color: #003254;">PA-Systemtechnology-Distribution Logon</th>
         </tr>
         <tr>
           <td>
@@ -39,19 +39,27 @@
           <td>
             Proxy servers: <input class="ml-3" style="width: 21.5rem;" type="text"><br>
             Authentication:
-            <select class="select ml-1">
+            <select class="select " style="height: 2em; margin-left: 3px;">
               <option>Basic</option>
               <option>No Authentication</option>
             </select>
-            <button class="button ml-4">Add Proxy Credentials</button>
+            <button style="height: 2em; margin-left: 63px;">Add Proxy Credentials</button>
           </td>
           <td>
-            <div class="field">
-              <input class="input" type="text" placeholder="Username">
+            <div>
+              <label for="username">Username:</label>
+              <input style="height: 2em;" type="text" id="username" name="username" required>
             </div>
-            <div class="field">
-              <input class="input" type="password" placeholder="Password">
+            <div>
+              <label for="password">Passwort:</label>
+              <input style="height: 2em; margin-left: 0.47rem;" type="password" id="password" name="password" required>
             </div>
+            <div>
+              <button type="button" onclick="login()">Login</button>
+              <p id="error-message"></p>
+            </div>
+          
+          
             <label class="checkbox">
               <input type="checkbox">
               No unpacking
@@ -60,22 +68,22 @@
         </tr>
       </table>
       <fieldset>
-        <legend style="display: inline-block;"> Basics </legend>
+        <legend style="display: inline-block; color: #003254;"> Basics </legend>
         <table border="1">
           <tr>
             <td>
               <div class="file">
-                Download Root: <input class="mr-3" type="text">
+                Download Root: <input class="mr-3" style="height: 2em;" type="text">
                 <label class="file-label mr-3">
-                  <input class="file-input mr-3" type="file" name="resume">
-                  <span class="file-cta">
-                    <span class="file-label">
+                  <input class="file-input mr-3"   type="file" name="resume">
+                  <span class="file-cta" style="height: 2em;"> 
+                
                       Choose a file…
-                    </span>
+            
                   </span>
                 </label>
                 proALPHA-Version:
-                <div class="select">
+                <div class="select is-small" >
                   <select id="version-select">
                     <option value="">Choose a version</option>
                     <option value="9.2.1">9.2.1</option>
@@ -112,8 +120,8 @@
               <div style="display: flex; align-items: center;">
                 <button class="is-medium" style="margin-right: 10px;"><img src="../assets/refresh.ico" alt=""></button>
                 <div style="display: flex; flex-direction: column;">
-                  <button class="button">create folders only</button>
-                  <button class="button">Start download</button>
+                  <button  style="height: 2em;">create folders only</button>
+                  <button  style="height: 2em;">Start download</button>
                 </div>
               </div>
             </td>
@@ -124,14 +132,7 @@
       <div class="container">
         <div id="table-container" class="table-container">
           <table border="1" style="background-color: white;">
-            <tr>
-              <td>chk</td>
-              <td>name</td>
-              <td>filename</td>
-              <td>destination</td>
-              <td>status</td>
-            </tr>
-            <!-- Existing rows removed -->
+      
           </table>
         </div>
       </div>
@@ -142,7 +143,8 @@
   </div>
 
   <!-- You can also require other files to run in this process -->
-  <script src="../renderer.js"></script>
+  <script src="../renderer.js"> </script>
+
 </body>
 
 </html>
