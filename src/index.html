@@ -55,10 +55,8 @@
               <input style="height: 2em; margin-left: 0.47rem;" type="password" id="password" name="password" required>
             </div>
             <div>
-              <button type="button" onclick="login()">Login</button>
-              <p id="error-message"></p>
+              <button type="button" id="login-button">Login</button>
             </div>
-          
           
             <label class="checkbox">
               <input type="checkbox">
@@ -73,19 +71,12 @@
           <tr>
             <td>
               <div class="file">
-                Download Root: <input class="mr-3" style="height: 2em;" type="text">
-                <label class="file-label mr-3">
-                  <input class="file-input mr-3"   type="file" name="resume">
-                  <span class="file-cta" style="height: 2em;"> 
-                
-                      Choose a file…
-            
-                  </span>
-                </label>
+                Download Root: <input type="text" id="folder-picker">
                 proALPHA-Version:
                 <div class="select is-small" >
                   <select id="version-select">
                     <option value="">Choose a version</option>
+                    <option value="9.2.1">9.2.1</option>
                     <option value="9.2.1">9.2.1</option>
                     <option value="9.2.0">9.2.0</option>
                     <option value="9.0.2">9.0.2</option>
@@ -120,7 +111,7 @@
               <div style="display: flex; align-items: center;">
                 <button class="is-medium" style="margin-right: 10px;"><img src="../assets/refresh.ico" alt=""></button>
                 <div style="display: flex; flex-direction: column;">
-                  <button  style="height: 2em;">create folders only</button>
+                  <button  style="height: 2em;" id="create-button">create folders only</button>
                   <button  style="height: 2em;">Start download</button>
                 </div>
               </div>
@@ -143,7 +134,7 @@
   </div>
 
   <!-- You can also require other files to run in this process -->
-  <script src="../renderer.js"> </script>
+  <script src="renderer.js"> </script>
 
 </body>
 

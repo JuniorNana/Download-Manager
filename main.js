@@ -1,40 +1,64 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+const axios = require('axios');
+const fs = require('fs');
 
 function createWindow() {
-  // Create the browser window.
   const mainWindow = new BrowserWindow({
     width: 940,
     height: 520,
-    resizable: true, // Add this line to enable window resizing
+    resizable: true,
     webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
+      nodeIntegration: true,
+      contextIsolation: false,
     }
   });
 
-  // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'src', 'index.html'));
-
-  // Open the DevTools.
-  // mainWindow.webContents.openDevTools();
 }
 
-// This method will be called when Electron has finished
-// initialization and is ready to create browser windows.
-// Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
   createWindow();
 
   app.on('activate', function () {
-    // On macOS it's common to re-create a window in the app when the
-    // dock icon is clicked and there are no other windows open.
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
 });
 
-// Quit when all windows are closed, except on macOS. There, it's common
-// for applications and their menu bar to stay active until the user quits
-// explicitly with Cmd + Q.
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit();
+});
+
+ipcMain.on('perform-login', async (event, arg) => {
+  const { username, password } = arg;
+  try {
+    const response = await axios.post('https://sysportal.proalpha.com/files/index.php', { username, password });
+    if (response.status === 200) {
+      event.reply('login-result', true);
+    } else {
+      event.reply('login-result', false);
+    }
+  } catch (error) {
+    console.error(error);
+    event.reply('login-result', false);
+  }
+});
+
+ipcMain.on('create-folders', (event, arg) => {
+  const { selectedFolder, selectedVersion } = arg;
+  const baseFolder = path.join(selectedFolder, 'pA-Install');
+  const versionFolder = path.join(baseFolder, selectedVersion);
+  const openedgeFolder = path.join(baseFolder, 'openedge');
+  const thirdpartyFolder = path.join(baseFolder, 'thirdparty');
+
+  try {
+    if (!fs.existsSync(baseFolder)) fs.mkdirSync(baseFolder);
+    if (!fs.existsSync(versionFolder)) fs.mkdirSync(versionFolder);
+    if (!fs.existsSync(openedgeFolder)) fs.mkdirSync(openedgeFolder);
+    if (!fs.existsSync(thirdpartyFolder)) fs.mkdirSync(thirdpartyFolder);
+    event.reply('folder-creation-result', true);
+  } catch (error) {
+    console.error(error);
+    event.reply('folder-creation-result', false);
+  }
 });
