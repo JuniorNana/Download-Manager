@@ -1,0 +1,75 @@
+{
+"FolderCreation":
+  [
+    {
+      "@id": "1",
+      "@name": "pA-install",
+      "@root": "@root@"
+    },
+    {
+      "@id": "2",
+      "@name": "@version@",
+      "@root": "1"
+    },
+    {
+      "@id": "3",
+      "@name": "repository",
+      "@root": "2"
+    },
+    {
+      "@id": "4",
+      "@name": "licenses",
+      "@root": "2"
+    },
+    {
+      "@id": "5",
+      "@name": "tools",
+      "@root": "2"
+    },
+    {
+      "@id": "6",
+      "@name": "sitebuilder",
+      "@root": "2"
+    },
+    {
+      "@id": "7",
+      "@name": "customerfiles",
+      "@root": "2"
+    },
+    {
+      "@id": "8",
+      "@name": "sourcecode",
+      "@root": "2"
+    },
+    {
+      "@id": "9",
+      "@name": "openedge",
+      "@root": "1"
+    },
+    {
+      "@id": "10",
+      "@name": "customer",
+      "@root": "4"
+    },
+    {
+      "@id": "11",
+      "@name": "demo",
+      "@root": "4"
+    },
+    {
+      "@id": "12",
+      "@name": "servicepacks",
+      "@root": "9"
+    },
+    {
+      "@id": "13",
+      "@name": "hotfixes",
+      "@root": "9"
+    },
+    {
+      "@id": "14",
+      "@name": "thirdparty",
+      "@root": "1"
+    }
+  ]
+}
