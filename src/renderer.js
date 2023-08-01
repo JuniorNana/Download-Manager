@@ -1,31 +1,76 @@
 const { ipcRenderer } = require('electron');
 const fs = require('fs');
+const path = require('path');
 
-// Die Funktion für den Login
-document.getElementById('login-button').addEventListener('click', function() {
-  const username = document.getElementById('username').value;
-  const password = document.getElementById('password').value;
+// Funktion zum rekursiven Erstellen von Ordnern basierend auf Config.json
+async function createFoldersFromConfig(basePath, configData) {
+  const folderMap = new Map(configData.FolderCreation.map(folder => [folder['@id'], folder]));
+  const createFolderRecursive = (folder) => {
+    if (folder['@root'] !== '@root@') {
+      const parentFolder = folderMap.get(folder['@root']);
+      createFolderRecursive(parentFolder);
+    }
+    const fullPath = path.join(basePath, folder['@name']);
+    if (!fs.existsSync(fullPath)) {
+      fs.mkdirSync(fullPath);
+    }
+  };
 
-  ipcRenderer.send('perform-login', { username, password });
-});
+  for (const folder of configData.FolderCreation) {
+    createFolderRecursive(folder);
+  }
+}
 
 document.getElementById('create-button').addEventListener('click', function() {
   const selectedFolder = document.getElementById('folder-picker').value;
 
-  // Überprüfen, ob der ausgewählte Pfad ein Ordner ist und nicht eine Datei
   fs.lstat(selectedFolder, (err, stats) => {
-    if (err) throw err;
-    if (stats.isDirectory()) {
-      const selectedVersion = document.getElementById('version-select').value;
-      ipcRenderer.send('create-folders', { selectedFolder, selectedVersion });
-    } else {
-      alert('Bitte wählen Sie einen Ordner aus, keine Datei');
+    if (err) {
+      console.error('Error accessing selected folder:', err);
+      alert('Ein Fehler ist aufgetreten beim Zugriff auf den ausgewählten Ordner');
+      return;
     }
+    if (!stats.isDirectory()) {
+      alert('Bitte wählen Sie einen Ordner aus, keine Datei');
+      return;
+    }
+
+    fs.readFile(path.join(__dirname, 'config.json'), 'utf8', (err, data) => {
+      if (err) {
+        console.error('Error reading config file:', err);
+        alert('Ein Fehler ist aufgetreten beim Lesen der Konfigurationsdatei');
+        return;
+      }
+
+      let configData;
+      try {
+        configData = JSON.parse(data);
+      } catch (err) {
+        console.error('Error parsing config file:', err);
+        alert('Ein Fehler ist aufgetreten beim Parsen der Konfigurationsdatei');
+        return;
+      }
+
+      try {
+        createFoldersFromConfig(selectedFolder, configData);
+        ipcRenderer.send('folder-creation-result', true);
+      } catch (err) {
+        console.error('Error creating folders:', err);
+        ipcRenderer.send('folder-creation-result', false);
+      }
+    });
   });
 });
 
 const versionSelect = document.getElementById('version-select');
 const tableContainer = document.getElementById('table-container');
+
+document.addEventListener('DOMContentLoaded', function() {
+  const table = document.createElement('table');
+  table.setAttribute('border', '1');
+  table.style.backgroundColor = 'white';
+  tableContainer.appendChild(table);
+});
 
 versionSelect.addEventListener('change', function () {
   const selectedVersion = versionSelect.value;
@@ -52,7 +97,6 @@ versionSelect.addEventListener('change', function () {
             ['chk', '_name', 'filename', 'destination', 'status'].forEach(key => {
               const td = document.createElement('td');
               if (key === 'chk') {
-                // Erstelle eine Checkbox für die "chk"-Spalte
                 const checkbox = document.createElement('input');
                 checkbox.type = 'checkbox';
                 td.appendChild(checkbox);
@@ -73,14 +117,6 @@ versionSelect.addEventListener('change', function () {
       });
   } else {
     tableContainer.innerHTML = '';
-  }
-});
-
-ipcRenderer.on('login-result', (event, success) => {
-  if (success) {
-    alert('Login erfolgreich!');
-  } else {
-    alert('Login fehlgeschlagen!');
   }
 });
 
