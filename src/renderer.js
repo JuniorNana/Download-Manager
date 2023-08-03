@@ -2,27 +2,39 @@ const { ipcRenderer } = require('electron');
 const fs = require('fs');
 const path = require('path');
 
-// Funktion zum rekursiven Erstellen von Ordnern basierend auf Config.json
-async function createFoldersFromConfig(basePath, configData) {
+async function createFoldersFromConfig(basePath, configData, selectedVersion) {
   const folderMap = new Map(configData.FolderCreation.map(folder => [folder['@id'], folder]));
-  const createFolderRecursive = (folder) => {
-    if (folder['@root'] !== '@root@') {
-      const parentFolder = folderMap.get(folder['@root']);
-      createFolderRecursive(parentFolder);
+
+  const createFolderRecursive = (folderId, parentPath) => {
+    const folder = folderMap.get(folderId);
+    if (!folder) return;
+
+    let folderName = folder['@name'];
+    if (folderName === '@version@') {
+      folderName = selectedVersion;
     }
-    const fullPath = path.join(basePath, folder['@name']);
+
+    const fullPath = path.join(parentPath, folderName);
     if (!fs.existsSync(fullPath)) {
       fs.mkdirSync(fullPath);
     }
+
+    for (const subFolder of configData.FolderCreation) {
+      if (subFolder['@root'] === folderId) {
+        createFolderRecursive(subFolder['@id'], fullPath);
+      }
+    }
   };
 
-  for (const folder of configData.FolderCreation) {
-    createFolderRecursive(folder);
+  const rootFolders = configData.FolderCreation.filter(folder => folder['@root'] === '@root@');
+  for (const rootFolder of rootFolders) {
+    createFolderRecursive(rootFolder['@id'], basePath);
   }
 }
 
-document.getElementById('create-button').addEventListener('click', function() {
+document.getElementById('create-button').addEventListener('click', function () {
   const selectedFolder = document.getElementById('folder-picker').value;
+  const selectedVersion = document.getElementById('version-select').value;
 
   fs.lstat(selectedFolder, (err, stats) => {
     if (err) {
@@ -52,7 +64,7 @@ document.getElementById('create-button').addEventListener('click', function() {
       }
 
       try {
-        createFoldersFromConfig(selectedFolder, configData);
+        createFoldersFromConfig(selectedFolder, configData, selectedVersion);
         ipcRenderer.send('folder-creation-result', true);
       } catch (err) {
         console.error('Error creating folders:', err);
@@ -61,6 +73,15 @@ document.getElementById('create-button').addEventListener('click', function() {
     });
   });
 });
+
+ipcRenderer.on('folder-creation-result', (event, success) => {
+  if (success) {
+    alert('Ordner wurden erfolgreich erstellt!');
+  } else {
+    alert('Es gab ein Problem beim Erstellen der Ordner');
+  }
+});
+
 
 const versionSelect = document.getElementById('version-select');
 const tableContainer = document.getElementById('table-container');
@@ -120,10 +141,13 @@ versionSelect.addEventListener('change', function () {
   }
 });
 
-ipcRenderer.on('folder-creation-result', (event, success) => {
-  if (success) {
-    alert('Ordner wurden erfolgreich erstellt!');
-  } else {
-    alert('Es gab ein Problem beim Erstellen der Ordner');
-  }
-});
+
+
+
+
+
+
+
+
+
+

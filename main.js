@@ -1,6 +1,5 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
-const axios = require('axios');
 
 function createWindow() {
   const mainWindow = new BrowserWindow({
@@ -22,18 +21,19 @@ app.whenReady().then(() => {
   app.on('activate', function () {
     if (BrowserWindow.getAllWindows().length === 0) createWindow();
   });
+
+  ipcMain.on('create-folders', (event, selectedFolder, configData, selectedVersion) => {
+    const { createFoldersFromConfig } = require('./renderer.js');
+    try {
+      createFoldersFromConfig(selectedFolder, configData, selectedVersion);
+      event.reply('folder-creation-result', true);
+    } catch (err) {
+      console.error('Error creating folders:', err);
+      event.reply('folder-creation-result', false);
+    }
+  });
 });
 
 app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit();
-});
-
-
-ipcMain.on('folder-creation-result', (event, success) => {
-  if (success) {
-    event.reply('folder-creation-result', true);
-  } else {
-    console.error('Es gab ein Problem beim Erstellen der Ordner');
-    event.reply('folder-creation-result', false);
-  }
 });
