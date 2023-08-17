@@ -3,23 +3,32 @@
 
 <head>
   <meta charset="UTF-8">
-  <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+
+  <!-- CSP-Regeln festlegen, um die Quellen für Inhalte zu beschränken, die auf der Seite geladen werden können -->
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
+
+  <!-- Einbinden des Bulma-CSS-Frameworks -->
   <link href="../assets/bulma.css" rel="stylesheet">
+
+  <!-- Setzen des Seitentitels -->
   <title>PA-Download</title>
 </head>
-
 <body style="background-color: #626a6e; font-size: smaller; color: black;">
+  <!-- Hauptcontainer für die Benutzeroberfläche -->
   <div style="margin: 8px;" class="is-size-1-desktop is-fullwidth is-small">
+    <!-- Beginn des Formulars -->
     <form>
+      <!-- Haupttabelle für die Einstellungen -->
       <table border="1" style="width: 96.5vw">
         <tr>
+          <!-- Überschriften für die Einstellungsbereiche -->
           <th style="color: #003254;">Proxy-Usage</th>
           <th style="color: #003254;">Proxy-Settings</th>
           <th style="color: #003254;">PA-Systemtechnology-Distribution Logon</th>
         </tr>
         <tr>
+          <!-- Auswahlmöglichkeiten für Proxy-Verwendung -->
           <td>
             <div class="control">
               <label class="radio">
@@ -45,6 +54,7 @@
             </select>
             <button style="height: 2em; margin-left: 63px;">Add Proxy Credentials</button>
           </td>
+          <!-- Anmeldebereich für das PA-System -->
           <td>
             <div>
               <label for="username">Username:</label>
@@ -57,7 +67,6 @@
             <div>
               <button type="button" id="login-button">Login</button>
             </div>
-          
             <label class="checkbox">
               <input type="checkbox">
               No unpacking
@@ -69,11 +78,14 @@
         <legend style="display: inline-block; color: #003254;"> Basics </legend>
         <table border="1">
           <tr>
+            <!-- Bereich für Zielordner und Version Auswahl -->
             <td>
               <div class="file">
-                Download Root: <input style="height: 2em; margin-left: 2px;" type="text" id="folder-picker" placeholder="z.B: D:\">
+                Download Root: <input style="height: 2em; margin-left: 2px;" type="text" id="folder-picker"
+                  placeholder="z.B: D:\">  <!-- Inputfeld für die Auswahl des Zielordners-->
                 proALPHA-Version:
-                <div style="margin-left: 2px;" class="select is-small" >
+                <div style="margin-left: 2px;" class="select is-small">
+                  <!-- Auswahl für die verschiedenen proALPHA-Versionen -->
                   <select id="version-select">
                     <option value="">Choose a version</option>
                     <option value="9.2.1">9.2.1</option>
@@ -106,12 +118,13 @@
                 </div>
               </div>
             </td>
+            <!-- Bereich für Aktionen wie Ordner erstellen und Download starten -->
             <td>
               <div style="display: flex; align-items: center;">
                 <button class="is-medium" style="margin-right: 10px;"><img src="../assets/refresh.ico" alt=""></button>
                 <div style="display: flex; flex-direction: column;">
-                  <button  style="height: 2em;" id="create-button">create folders only</button>
-                  <button  style="height: 2em;">Start download</button>
+                  <button style="height: 2em;" id="create-button">create folders only</button>
+                  <button style="height: 2em;">Start download</button>
                 </div>
               </div>
             </td>
@@ -119,18 +132,23 @@
         </table>
       </fieldset>
 
+      <!-- Container für die Anzeige von Daten der proALPHA-Versionen (Daten aus der prepare.json) in einer Tabelle -->
       <div class="container">
         <div id="table-container" class="table-container">
+          <!-- Leere Tabelle; Daten werden hier dynamisch eingefügt -->
           <table border="1" style="background-color: white;"></table>
         </div>
       </div>
     </form>
+
+    <!-- Footer-Bereich der Anwendung -->
     <footer class="card-footer is-justify-content-flex-end">
+      <!-- Versionsinformationen der Anwendung und ihrer Konfiguration -->
       App v1.1.4.7 <div class="ml-2">config v1.1.4.7</div>
     </footer>
   </div>
 
-  <!-- You can also require other files to run in this process -->
+  <!-- Externes JavaScript, das die Logik und Interaktionen auf dieser Seite steuert -->
   <script src="renderer.js"> </script>
 
 </body>
